@@ -24,8 +24,8 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Java User/.m2/repository/org/eclipse/persistence/eclipselink/2.7.0/eclipselink-2.7.0.jar" sourcepath="C:/Users/Java User/.m2/repository/org/eclipse/persistence/eclipselink/2.7.0/eclipselink-2.7.0-sources.jar">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Java User/.m2/repository/org/eclipse/persistence/eclipselink/2.7.0/eclipselink-2.7.0-javadoc.jar!/"/>
+			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="maven.groupId" value="org.eclipse.persistence"/>
 			<attribute name="maven.artifactId" value="eclipselink"/>
 			<attribute name="maven.version" value="2.7.0"/>
@@ -34,8 +34,8 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Java User/.m2/repository/org/eclipse/persistence/eclipselink/2.7.1/eclipselink-2.7.1.jar" sourcepath="C:/Users/Java User/.m2/repository/org/eclipse/persistence/eclipselink/2.7.1/eclipselink-2.7.1-sources.jar">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Java User/.m2/repository/org/eclipse/persistence/eclipselink/2.7.1/eclipselink-2.7.1-javadoc.jar!/"/>
+			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="maven.groupId" value="org.eclipse.persistence"/>
 			<attribute name="maven.artifactId" value="eclipselink"/>
 			<attribute name="maven.version" value="2.7.1"/>
