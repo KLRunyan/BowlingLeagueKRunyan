@@ -7,20 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Player;
-
+import model.Team;
 
 /**
- * Servlet implementation class editPlayerServlet
+ * Servlet implementation class EditTeamServlet
  */
-@WebServlet("/editPlayerServlet")
-public class EditPlayerServlet extends HttpServlet {
+@WebServlet("/EditTeamServlet")
+public class EditTeamServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditPlayerServlet() {
+    public EditTeamServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,19 +38,19 @@ public class EditPlayerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String act = request.getParameter("doThisToItem");
-		PlayerHelper dao = new PlayerHelper();
+		TeamHelper dao = new TeamHelper();
 		if (act == null) {
 			//no button has been selected
-			getServletContext().getRequestDispatcher("/EditPlayerServlet").forward(request, response);
-		} else if (act.equals("Delete Selected Player")) {
+			getServletContext().getRequestDispatcher("/viewAllTeamsServlet").forward(request, response);
+		} else if (act.equals("Delete Selected Team")) {
 			Integer tempId = Integer.parseInt(request.getParameter("id"));
-			Player itemToDelete = dao.searchForTeamById(tempId);
+			Team itemToDelete = dao.searchForItemById(tempId);
 			dao.deleteItem(itemToDelete);
 
-			getServletContext().getRequestDispatcher("/EditPlayerServlet").forward(request, response);
+			getServletContext().getRequestDispatcher("/ViewAllTeamsServlet").forward(request, response);
 		} 
-		else if (act.equals("Add a New Player")) {
-			getServletContext().getRequestDispatcher("/AddPlayer.html").forward(request, response);
+		else if (act.equals("Add New Team")) {
+			getServletContext().getRequestDispatcher("/AddTeam.html").forward(request, response);
 		}
 		else if (act.equals("Back To Menu")) {
 			getServletContext().getRequestDispatcher("/index.html").forward(request, response);
