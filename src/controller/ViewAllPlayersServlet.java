@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ViewAllPlayerServlet
+ * Servlet implementation class ViewAllPlayersServlet
  */
-@WebServlet("/ViewAllPlayerServlet")
-public class ViewAllPlayerServlet extends HttpServlet {
+@WebServlet("/viewAllPlayersServlet")
+public class ViewAllPlayersServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ViewAllPlayerServlet() {
+    public ViewAllPlayersServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,8 +30,13 @@ public class ViewAllPlayerServlet extends HttpServlet {
 		PlayerHelper dao = new PlayerHelper();
 		request.setAttribute("allItems", dao.viewAllPlayers());
 		
-		getServletContext().getRequestDispatcher("/viewAllPlayer.jsp").forward(request, response);
+		if (dao.viewAllPlayers().isEmpty()) {
+			request.setAttribute("allItems"," ");
+		}
+		
+		getServletContext().getRequestDispatcher("/viewAllPlayers.jsp").forward(request, response);
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

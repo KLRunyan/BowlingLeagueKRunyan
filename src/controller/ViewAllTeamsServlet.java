@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import controller.TeamHelper;
+
 /**
  * Servlet implementation class ViewAllTeamsServlet
  */
@@ -28,7 +30,11 @@ public class ViewAllTeamsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		TeamHelper dao = new TeamHelper();
-		request.setAttribute("allItems", dao.showAllItems());
+		request.setAttribute("allItems", dao.viewAllTeams());
+		
+//		if (dao.viewAllTeams().isEmpty()) {
+//			request.setAttribute("allItems"," ");
+//		}
 		
 		getServletContext().getRequestDispatcher("/viewAllTeams.jsp").forward(request, response);
 	}
