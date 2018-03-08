@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,8 +8,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" action="ViewAllPlayersServlet">
+<form method="post" action="editPlayerServlet">
 	<table>
+		<tr>
+		 <th>Select</th>
+		   <th>First Name</th>
+		   <th>Last Name</th>
+		   <th>Phone #</th>
+		   <th>Screen Name</th>  
+		   <th>Team</th>      
+		 </tr>
 		<c:forEach items="${requestScope.allItems}" var="currentitem">
 		<tr>
 			<td><input type="radio" name="id" value="${currentitem.playerId}"></td>
@@ -25,4 +34,4 @@
 <input type="submit" value="Back To Menu" name="doThisToItem">
 	</form>
 </body>
-</html>tml>
+</html>

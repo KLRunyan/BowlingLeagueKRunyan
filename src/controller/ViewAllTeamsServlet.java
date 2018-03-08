@@ -12,7 +12,7 @@ import controller.TeamHelper;
 /**
  * Servlet implementation class ViewAllTeamsServlet
  */
-@WebServlet("/ViewAllTeamsServlet")
+@WebServlet("/viewAllTeamsServlet")
 public class ViewAllTeamsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
