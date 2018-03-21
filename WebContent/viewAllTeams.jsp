@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="editTeamsServlet">
+	<form method="post" action="editTeamServlet">
 		<table>
 		 <tr>
 	 <th>Select</th>
@@ -16,7 +16,7 @@
 	   <th>Team Type</th>
 	   <th>Preferred Night</th>   
 	 </tr>
-			<c:forEach item="${requestScope.allItems}" var="currentitem">
+			<c:forEach items="${requestScope.allItems}" var="currentitem">
 				<tr>
 					<td><input type="radio" name="id" value="${currentitem.teamId}"></td>
 					<td>${currentitem.teamName}</td>

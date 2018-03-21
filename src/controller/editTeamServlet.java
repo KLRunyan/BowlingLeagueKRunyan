@@ -47,7 +47,7 @@ public class editTeamServlet extends HttpServlet {
 			Team itemToDelete = dao.searchForItemById(tempId);
 			dao.deleteItem(itemToDelete);
 
-			getServletContext().getRequestDispatcher("/ViewAllTeamsServlet").forward(request, response);
+			getServletContext().getRequestDispatcher("/viewAllTeamsServlet").forward(request, response);
 		} 
 		else if (act.equals("Add New Team")) {
 			getServletContext().getRequestDispatcher("/AddTeam.html").forward(request, response);
